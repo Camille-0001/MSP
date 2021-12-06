@@ -1,0 +1,94 @@
+Status: FAILED
+Time Taken: 71
+Size: 644
+Timestamp: Mon Dec 06 15:58:51 CET 2021
+TestStep: GetByName - Request 1
+
+----------------- Messages ------------------------------
+[XPath Match] XPathContains assertion failed for path [declare namespace soap-env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace s='http://www.w3.org/2001/XMLSchema';
+declare namespace ns1='http://tempuri.org';
+
+//ns1:PersonIdentification[1]/ns1:ID/text()] : RuntimeException: Trying XBeans path engine... Trying XQRL... Trying delegated path engine... FAILED on declare namespace soap-env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace s='http://www.w3.org/2001/XMLSchema';
+declare namespace ns1='http://tempuri.org';
+
+//ns1:PersonIdentification[1]/ns1:ID/text()
+[XPath Match 2] XPathContains assertion failed for path [declare namespace soap-env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace s='http://www.w3.org/2001/XMLSchema';
+declare namespace ns1='http://tempuri.org';
+
+//ns1:PersonIdentification[1]/ns1:DOB/preceding-sibling::ns1:SSN/text()] : RuntimeException: Trying XBeans path engine... Trying XQRL... Trying delegated path engine... FAILED on declare namespace soap-env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace s='http://www.w3.org/2001/XMLSchema';
+declare namespace ns1='http://tempuri.org';
+
+//ns1:PersonIdentification[1]/ns1:DOB/preceding-sibling::ns1:SSN/text()
+[XPath Match 3] XPathContains assertion failed for path [declare namespace soap-env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace s='http://www.w3.org/2001/XMLSchema';
+declare namespace ns1='http://tempuri.org';
+
+count(//ns1:Name[contains(text(),"Newton")])] : RuntimeException: Trying XBeans path engine... Trying XQRL... Trying delegated path engine... FAILED on declare namespace soap-env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace s='http://www.w3.org/2001/XMLSchema';
+declare namespace ns1='http://tempuri.org';
+
+count(//ns1:Name[contains(text(),"Newton")])
+
+----------------- Properties ------------------------------
+Endpoint: https://www.crcind.com:443/csp/samples/SOAP.Demo.cls
+Encoding: UTF-8
+
+---------------- Request ---------------------------
+Request Headers: SOAPAction : "http://tempuri.org/SOAP.Demo.GetListByName"
+Connection : Keep-Alive
+User-Agent : Apache-HttpClient/4.1.1 (java 1.5)
+Host : www.crcind.com:443
+Accept-Encoding : gzip,deflate
+Content-Length : 301
+Content-Type : text/xml;charset=UTF-8
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetByName>
+         <!--Optional:-->
+         <tem:name>Newton</tem:name>
+      </tem:GetByName>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+---------------- Response --------------------------
+Response Headers: Cache-Control : no-cache
+Server : Microsoft-IIS/8.5
+Content-Encoding : gzip
+Set-Cookie : CSPSESSIONID-SP-443-UP-csp-samples-=005000010000BN0rFFIQw000005UNd8Kd$FXDpIEjcBe3Kng--; path=/csp/samples/;  secure; httpOnly;
+Set-Cookie : CSPWSERVERID=56cd9b9b1cd3a6104035e2b9b38ec1f2908c3ea3; path=/; httpOnly; secure;
+Pragma : no-cache
+Expires : Thu, 29 Oct 1998 17:04:19 GMT
+#status# : HTTP/1.1 200 OK
+Content-Length : 344
+Date : Mon, 06 Dec 2021 14:58:50 GMT
+Content-Type : text/xml; charset=UTF-8
+X-Powered-By : ASP.NET
+
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="http://www.w3.org/2001/XMLSchema">
+   <SOAP-ENV:Body>
+      <GetListByNameResponse xmlns="http://tempuri.org">
+         <GetListByNameResult>
+            <PersonIdentification>
+               <ID>1</ID>
+               <Name>Newton,Dave R.</Name>
+               <SSN>384-10-6538</SSN>
+               <DOB>2000-03-20</DOB>
+            </PersonIdentification>
+            <PersonIdentification>
+               <ID>29</ID>
+               <Name>Newton,Mario B.</Name>
+               <SSN>538-68-5047</SSN>
+               <DOB>2004-11-17</DOB>
+            </PersonIdentification>
+         </GetListByNameResult>
+      </GetListByNameResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

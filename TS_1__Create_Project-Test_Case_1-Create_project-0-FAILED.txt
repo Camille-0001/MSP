@@ -1,0 +1,57 @@
+Status: FAILED
+Time Taken: 4606
+Size: 155
+Timestamp: Mon Dec 06 13:52:06 CET 2021
+TestStep: Create project
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:500 is not in acceptable list of status codes
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8080/squash/api/rest/latest
+Username: admin
+Method: POST
+StatusCode: 500
+URL: http://localhost:8080/squash/api/rest/latest/projects
+Password: admin
+
+---------------- Request ---------------------------
+Cookie: [JSESSIONID=DFB5477E29AD309884AFC57B2AD89D22]
+Authorization: [Basic YWRtaW46YWRtaW4=]
+Cookie2: [$Version=1]
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [localhost:8080]
+Accept-Encoding: [gzip,deflate]
+Content-Length: [133]
+Content-Type: [application/json]
+
+POST http://localhost:8080/squash/api/rest/latest/projects HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/json
+Content-Length: 133
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+Cookie: JSESSIONID=DFB5477E29AD309884AFC57B2AD89D22
+Cookie2: $Version=1
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+
+---------------- Response --------------------------
+X-Frame-Options: [DENY]
+Transfer-Encoding: [chunked]
+Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+X-Content-Type-Options: [nosniff]
+Connection: [close]
+Set-Cookie: [JSESSIONID=601D6306553A62846E4B5AC4DFB6CB93; Path=/squash; HttpOnly]
+Pragma: [no-cache]
+Expires: [0]
+#status#: [HTTP/1.1 500 ]
+X-XSS-Protection: [1; mode=block]
+Date: [Mon, 06 Dec 2021 12:52:11 GMT]
+Content-Type: [application/json;charset=UTF-8]
+
+{"exception":"org.squashtest.tm.exception.NameAlreadyInUseException","message":"The name 'Mon troisieme projet' is already used by another Project entity"}

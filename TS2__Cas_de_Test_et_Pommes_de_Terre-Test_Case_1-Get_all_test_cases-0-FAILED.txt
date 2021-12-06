@@ -1,0 +1,76 @@
+Status: FAILED
+Time Taken: 214
+Size: 542
+Timestamp: Mon Dec 06 09:45:12 CET 2021
+TestStep: Get all test cases
+
+----------------- Messages ------------------------------
+[Response SLA] Response did not meet SLA 214/200
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8080/squash/api/rest/latest
+Username: admin
+Method: GET
+StatusCode: 200
+URL: http://localhost:8080/squash/api/rest/latest/test-cases
+Password: admin
+
+---------------- Request ---------------------------
+Cookie: [JSESSIONID=F27C5851ABDFAEB8FEFE7C0647256AE5]
+Authorization: [Basic YWRtaW46YWRtaW4=]
+Cookie2: [$Version=1]
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [localhost:8080]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8080/squash/api/rest/latest/test-cases HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+Cookie: JSESSIONID=F27C5851ABDFAEB8FEFE7C0647256AE5
+Cookie2: $Version=1
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- Response --------------------------
+X-Frame-Options: [DENY]
+Transfer-Encoding: [chunked]
+Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+X-Content-Type-Options: [nosniff]
+Set-Cookie: [JSESSIONID=D50D576358F647E81D45A8F25AED99EE; Path=/squash; HttpOnly]
+Pragma: [no-cache]
+Expires: [0]
+#status#: [HTTP/1.1 200 ]
+X-XSS-Protection: [1; mode=block]
+Date: [Mon, 06 Dec 2021 08:45:12 GMT]
+Content-Type: [application/json;charset=UTF-8]
+
+{
+  "_embedded" : {
+    "test-cases" : [ {
+      "_type" : "test-case",
+      "id" : 239,
+      "name" : "cdt",
+      "reference" : "cdt",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/squash/api/rest/latest/test-cases/239"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/squash/api/rest/latest/test-cases?page=0&size=20"
+    }
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 1,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}
